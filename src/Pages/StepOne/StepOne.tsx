@@ -63,7 +63,7 @@ export const StepOne = forwardRef<handleClick, submitStepOneData>(
             <InputText
               className="w-96"
               value={stepOnedata.workspacetitle}
-              onChange={(e: any) =>
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                 setStepOnedata({
                   ...stepOnedata,
                   workspacetitle: e.target.value,
@@ -97,7 +97,7 @@ export const StepOne = forwardRef<handleClick, submitStepOneData>(
             <InputText
               className="w-96"
               value={stepOnedata.purpose}
-              onChange={(e: any) =>
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                 setStepOnedata({ ...stepOnedata, purpose: e.target.value })
               }
             />
@@ -127,19 +127,21 @@ export const StepOne = forwardRef<handleClick, submitStepOneData>(
               <ValidationError message="Owner of workspace is required" />
             )}
           </div>
-          <div className="">
-            <label className="text-[20px] block mb-1">Secondary Owner*</label>
-            <SearchDropDown
-              className="w-96"
-              options={userOption}
-              onChange={(newValue: string) => {
-                setStepOnedata({ ...stepOnedata, secondaryOwner: newValue });
-              }}
-            />
-            {formError && stepOnedata.secondaryOwner === "" && (
-              <ValidationError message="Secondary owner of workspace is required" />
-            )}
-          </div>
+          {stepOnedata.OrganizationDepartment !== "CIO" && (
+            <div className="">
+              <label className="text-[20px] block mb-1">Secondary Owner*</label>
+              <SearchDropDown
+                className="w-96"
+                options={userOption}
+                onChange={(newValue: string) => {
+                  setStepOnedata({ ...stepOnedata, secondaryOwner: newValue });
+                }}
+              />
+              {formError && stepOnedata.secondaryOwner === "" && (
+                <ValidationError message="Secondary owner of workspace is required" />
+              )}
+            </div>
+          )}
         </div>
       </div>
     );

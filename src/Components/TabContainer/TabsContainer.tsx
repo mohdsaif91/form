@@ -1,5 +1,5 @@
 import React from "react";
-import { tabContainerProps, tabItem } from "./tabContainerProps";
+import { tabContainerProps } from "./tabContainerProps";
 import { tabData } from "../../util/data";
 
 function TabsContainer({

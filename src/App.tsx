@@ -93,7 +93,7 @@ function App() {
          text-[white] hover:border-[1px]  hover:text-[black] hover:bg-[white] hover:border-black"
           onClick={() => handleClick()}
         >
-          {step == 2 ? "Submit" : "Next"}
+          {step === 2 ? "Submit" : "Next"}
         </button>
       </div>
     </div>

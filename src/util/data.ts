@@ -1,7 +1,7 @@
 export const tabData = [
-  { id: 0, text: "step1" },
-  { id: 1, text: "step2" },
-  { id: 2, text: "step3" },
+  { id: 0, text: "Workspace Owner" },
+  { id: 1, text: "Workspace Compliance" },
+  { id: 2, text: "Workspace Framework" },
 ];
 
 export const departmentOptions = ["RDS", "RWS", "CIO", "RDS:PL", "DSSM", "RMM"];
@@ -29,8 +29,8 @@ export const initialStepTwoData = {
 };
 export const initialStepThreeData = {
   rmClassification: "",
-  canAuditOrInscept: "",
+  canAuditOrInscept: "Yes",
   sopGuidelineForWorkSpace: "",
   reminderAtEnd: "",
-  canDeleteIfNotInUsed: "",
+  canDeleteIfNotInUsed: "Yes",
 };

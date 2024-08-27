@@ -34,7 +34,7 @@ export const StepThree = forwardRef<handleClick, submitStepThreeprops>(
             <InputText
               className="w-96"
               value={stepThreeData.rmClassification}
-              onChange={(e: any) =>
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                 setStepThreeData({
                   ...stepThreeData,
                   rmClassification: e.target.value,
@@ -63,36 +63,36 @@ export const StepThree = forwardRef<handleClick, submitStepThreeprops>(
           </div>
         </div>
         <div className="mb-8 grid grid-cols-2 w-full">
+          {stepThreeData.canAuditOrInscept !== "No" && (
+            <div className="">
+              <label className="text-[20px] block mb-1">
+                SOP/Guideline specfic*
+              </label>
+              <InputText
+                className="w-96"
+                value={stepThreeData.sopGuidelineForWorkSpace}
+                onChange={(e: any) =>
+                  setStepThreeData({
+                    ...stepThreeData,
+                    sopGuidelineForWorkSpace: e.target.value,
+                  })
+                }
+              />
+              {formError && stepThreeData.sopGuidelineForWorkSpace === "" && (
+                <ValidationError message="SOP/Guideline is required" />
+              )}
+            </div>
+          )}
           <div className="">
-            <label className="text-[20px] block mb-1">
-              SOP/Guideline specfic*
-            </label>
-            <InputText
-              className="w-96"
-              value={stepThreeData.sopGuidelineForWorkSpace}
-              onChange={(e: any) =>
-                setStepThreeData({
-                  ...stepThreeData,
-                  sopGuidelineForWorkSpace: e.target.value,
-                })
-              }
-            />
-            {formError && stepThreeData.sopGuidelineForWorkSpace === "" && (
-              <ValidationError message="SOP/Guideline is required" />
-            )}
-          </div>
-          <div className="">
-            <label className="text-[20px] block mb-1">
-              Can audit or inscept this workspace
-            </label>
+            <label className="text-[20px] block mb-1">Reminder at end</label>
             <DropDown
               className="w-96"
               options={yesNoOption}
-              value={stepThreeData.canAuditOrInscept}
+              value={stepThreeData.reminderAtEnd}
               onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
                 setStepThreeData({
                   ...stepThreeData,
-                  canAuditOrInscept: e.target.value,
+                  reminderAtEnd: e.target.value,
                 })
               }
             />
