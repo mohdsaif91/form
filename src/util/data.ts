@@ -4,6 +4,12 @@ export const tabData = [
   { id: 2, text: "Workspace Framework" },
 ];
 
+export const validationStepErrorState = [
+  { flag: false },
+  { flag: false },
+  { flag: false },
+];
+
 export const departmentOptions = ["RDS", "RWS", "CIO", "RDS:PL", "DSSM", "RMM"];
 
 export const ownerOrProcessor = ["Owner", "Processor"];
@@ -13,7 +19,7 @@ export const yesNoOption = ["Yes", "No"];
 export const initialStepOneData = {
   dataID: "",
   workspacetitle: "",
-  OrganizationDepartment: "RDS",
+  organizationDepartment: "RDS",
   purpose: "",
   owner: "",
   secondaryOwner: "", // (Button to add another secondary user if needed),
@@ -31,6 +37,6 @@ export const initialStepThreeData = {
   rmClassification: "",
   canAuditOrInscept: "Yes",
   sopGuidelineForWorkSpace: "",
-  reminderAtEnd: "",
+  reminderAtEnd: "Yes",
   canDeleteIfNotInUsed: "Yes",
 };

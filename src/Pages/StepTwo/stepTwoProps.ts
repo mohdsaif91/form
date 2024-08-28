@@ -10,4 +10,6 @@ export interface stepTwoProps {
 
 export interface submitStepTwoprops {
   onClick: (data: stepTwoProps) => void;
+  validateOnClick: (flag: boolean) => void;
+  invalidForm: boolean;
 }

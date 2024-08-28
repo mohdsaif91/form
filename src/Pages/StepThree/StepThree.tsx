@@ -7,21 +7,31 @@ import { handleClick } from "../../rootInterface";
 import ValidationError from "../../Components/ValidationError/ValidationError";
 
 export const StepThree = forwardRef<handleClick, submitStepThreeprops>(
-  ({ onClick }, ref) => {
+  ({ onClick, validateOnClick, invalidForm }, ref) => {
     const [stepThreeData, setStepThreeData] =
       useState<stepThreeProps>(initialStepThreeData);
-    const [formError, setFormError] = useState<boolean>(false);
+    const [formError, setFormError] = useState<boolean>(invalidForm || false);
 
     useImperativeHandle(ref, () => ({
       click: () => {
-        console.log("CLICKED 3 <>? ", stepThreeData);
         if (
           stepThreeData.rmClassification === "" ||
           stepThreeData.sopGuidelineForWorkSpace === ""
         ) {
           setFormError(true);
         } else {
+          setFormError(false);
           onClick(stepThreeData);
+        }
+      },
+      validateClick: () => {
+        if (
+          stepThreeData.rmClassification === "" ||
+          stepThreeData.sopGuidelineForWorkSpace === ""
+        ) {
+          validateOnClick(true);
+        } else {
+          validateOnClick(false);
         }
       },
     }));

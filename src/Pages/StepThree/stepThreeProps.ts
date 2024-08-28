@@ -9,4 +9,6 @@ export interface stepThreeProps {
 
 export interface submitStepThreeprops {
   onClick: (data: stepThreeProps) => void;
+  validateOnClick: (data: boolean) => void;
+  invalidForm: boolean;
 }

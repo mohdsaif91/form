@@ -26,10 +26,211 @@
     -->
     <title>React App</title>
   </head>
+
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <div>
+      <form
+        name="myForm"
+        action="[LL_CGIPATH /]"
+        enctype="multipart/form-data"
+        method="POST"
+      >
+        <input type="hidden" name="func" value="[LL_FUNC /]" />
+        <input type="hidden" name="LL_FUNC_VALUES" value="[LL_FUNC_VALUES /]" />
+        <input type="hidden" name="LL_AttrFieldName" value="" />
+        <input type="hidden" name="LL_AttrFieldIndex" value="" />
+        <input type="hidden" name="LL_WFATTURL" value="[LL_WFATTURL /]" />
+
+        <input
+          class="valueEditable"
+          type="text"
+          name="_1_1_2_1"
+          title="Workspace Title"
+          id="_1_1_2_1"
+          value="[LL_FormTag_1_1_2_1 /]"
+          size="32"
+          maxlength="254"
+          ONCHANGE="markDirty();"
+        />
+        <input
+          class="valueEditable"
+          type="text"
+          name="_1_1_3_1"
+          title="Purpose"
+          id="_1_1_3_1"
+          value="[LL_FormTag_1_1_3_1 /]"
+          size="32"
+          maxlength="254"
+          ONCHANGE="markDirty();"
+        />
+        <input
+          class="valueEditable"
+          type="text"
+          name="_1_1_4_1"
+          title="Owner"
+          id="_1_1_4_1"
+          value="[LL_FormTag_1_1_4_1 /]"
+          size="32"
+          maxlength="254"
+          ONCHANGE="markDirty();"
+        />
+        <input
+          class="valueEditable"
+          type="text"
+          name="_1_1_5_1"
+          title="Department"
+          id="_1_1_5_1"
+          value="[LL_FormTag_1_1_5_1 /]"
+          size="32"
+          maxlength="254"
+          ONCHANGE="markDirty();"
+        />
+        <input
+          class="valueEditable"
+          type="text"
+          name="_1_1_6_1"
+          title="Control Group"
+          id="_1_1_6_1"
+          value="[LL_FormTag_1_1_6_1 /]"
+          size="32"
+          maxlength="254"
+          ONCHANGE="markDirty();"
+        />
+        <input
+          class="valueEditable"
+          type="text"
+          name="_1_1_7_1"
+          title="Secondary Owner"
+          id="_1_1_7_1"
+          value="[LL_FormTag_1_1_7_1 /]"
+          size="32"
+          maxlength="254"
+          ONCHANGE="markDirty();"
+        />
+        <input
+          class="valueEditable"
+          type="text"
+          name="_1_1_8_1"
+          title="Retention Period"
+          id="_1_1_8_1"
+          value="[LL_FormTag_1_1_8_1 /]"
+          size="32"
+          maxlength="254"
+          ONCHANGE="markDirty();"
+        />
+
+        <input
+          class="valueEditable"
+          type="text"
+          name="_1_1_9_1"
+          title="User Internal"
+          id="_1_1_9_1"
+          value="[LL_FormTag_1_1_9_1 /]"
+          size="32"
+          maxlength="254"
+          ONCHANGE="markDirty();"
+        />
+        <input
+          class="valueEditable"
+          type="text"
+          name="_1_1_10_1"
+          title="User External"
+          id="_1_1_10_1"
+          value="[LL_FormTag_1_1_10_1 /]"
+          size="32"
+          maxlength="254"
+          ONCHANGE="markDirty();"
+        />
+        <input
+          class="valueEditable"
+          type="text"
+          name="_1_1_11_1"
+          title="RM Classification"
+          id="_1_1_11_1"
+          value="[LL_FormTag_1_1_11_1 /]"
+          size="32"
+          maxlength="254"
+          ONCHANGE="markDirty();"
+        />
+        <input
+          class="valueEditable"
+          type="text"
+          name="_1_1_12_1"
+          title="SOP Guideline"
+          id="_1_1_12_1"
+          value="[LL_FormTag_1_1_12_1 /]"
+          size="32"
+          maxlength="254"
+          ONCHANGE="markDirty();"
+        />
+        <input
+          class="valueEditable"
+          type="text"
+          name="_1_1_13_1"
+          title="Workspace Use"
+          id="_1_1_13_1"
+          value="[LL_FormTag_1_1_13_1 /]"
+          size="32"
+          maxlength="254"
+          ONCHANGE="markDirty();"
+        />
+        <input
+          class="valueEditable"
+          type="text"
+          name="_1_1_14_1"
+          title="Audit WS"
+          id="_1_1_14_1"
+          value="[LL_FormTag_1_1_14_1 /]"
+          size="32"
+          maxlength="254"
+          ONCHANGE="markDirty();"
+        />
+        <input
+          class="valueEditable"
+          type="text"
+          name="_1_1_15_1"
+          title="Reminder"
+          id="_1_1_15_1"
+          value="[LL_FormTag_1_1_15_1 /]"
+          size="32"
+          maxlength="254"
+          ONCHANGE="markDirty();"
+        />
+        <input
+          class="valueEditable"
+          type="text"
+          name="_1_1_16_1"
+          title="Regulatory Entity"
+          id="_1_1_16_1"
+          value="[LL_FormTag_1_1_16_1 /]"
+          size="32"
+          maxlength="254"
+          ONCHANGE="markDirty();"
+        />
+        <input
+          class="valueEditable"
+          type="text"
+          name="_1_1_17_1"
+          title="Data Type"
+          id="_1_1_17_1"
+          value="[LL_FormTag_1_1_17_1 /]"
+          size="32"
+          maxlength="254"
+          ONCHANGE="markDirty();"
+        />
+        <input
+          className="applyButton"
+          type="submit"
+          value="Apply"
+          id="finalSubmitBtn"
+          name="IgnoreMe"
+        />
+      </form>
+    </div>
     <!--
+    onClick="doFormSubmit( document.myForm );" 
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -40,4 +241,9 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <script>
+    function btnClick() {
+      console.log("BTN CLICKED <>? !!!!!!!!!!!!!!!!!!");
+    }
+  </script>
 </html>

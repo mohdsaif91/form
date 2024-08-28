@@ -9,10 +9,10 @@ import { handleClick } from "../../rootInterface";
 import ValidationError from "../../Components/ValidationError/ValidationError";
 
 export const StepTwo = forwardRef<handleClick, submitStepTwoprops>(
-  ({ onClick }, ref) => {
+  ({ onClick, validateOnClick, invalidForm }, ref) => {
     const [stepTwoData, setStepTwoData] =
       useState<stepTwoProps>(initialStepTwoData);
-    const [formError, setFormError] = useState<boolean>(false);
+    const [formError, setFormError] = useState<boolean>(invalidForm || false);
 
     useImperativeHandle(ref, () => ({
       click: () => {
@@ -22,7 +22,19 @@ export const StepTwo = forwardRef<handleClick, submitStepTwoprops>(
         ) {
           setFormError(true);
         } else {
+          setFormError(false);
+          validateOnClick(false);
           onClick(stepTwoData);
+        }
+      },
+      validateClick: () => {
+        if (
+          stepTwoData.typeOfData.length === 0 ||
+          stepTwoData.regulatoryEntityApplicable.length === 0
+        ) {
+          validateOnClick(true);
+        } else {
+          validateOnClick(false);
         }
       },
     }));

@@ -1,7 +1,7 @@
 export interface stepOneProps {
   dataID: string;
   workspacetitle: string;
-  OrganizationDepartment: string;
+  organizationDepartment: string;
   purpose: string;
   owner: string;
   secondaryOwner: string;
@@ -11,4 +11,6 @@ export interface stepOneProps {
 
 export interface submitStepOneData {
   onClick: (data: stepOneProps) => void;
+  validateOnClick: (flag: boolean) => void;
+  invalidForm: boolean;
 }

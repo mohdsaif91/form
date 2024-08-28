@@ -1,8 +1,9 @@
-import { formStep } from "../../rootInterface";
+import { formStep, validationStepErrorProps } from "../../rootInterface";
 
 export interface tabContainerProps {
   activeStep: formStep;
   onTabChange: (stepNumebr: formStep) => void;
+  validationStepError: validationStepErrorProps;
 }
 
 export interface tabItem {
